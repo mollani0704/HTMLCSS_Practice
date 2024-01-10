@@ -175,6 +175,71 @@ header {
   color: white;
 } */
 
+/* ===== Section : plan ====== */
+.plan-inner {
+  height: 100%;
+}
+
+.plan-feature {
+  width: 80%;
+  height: 80%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.plan-info {
+  width: 100%;
+  height: 50%;
+  color: white;
+}
+
+.plan-info > div {
+  float: left;
+}
+
+.plan-heading > h1 {
+  font-weight: normal;
+  font-size: 30px;
+  margin: 0;
+}
+
+.plan-bar {
+  width: 50px;
+  height: 4px;
+  border: none;
+  background-color: #0088cc;
+  margin: 30px 0;
+}
+
+.plan-heading > p {
+  font-weight: normal;
+}
+
+.plan-photo > img {
+  width: 100%;
+  height: 100%;
+}
+
+.history-info {
+  width: 100%;
+  height: 50%;
+  background-color: red;
+}
+
+.plan-heading {
+  width: 60%;
+  height: 100%;
+}
+
+.plan-photo {
+  width: 40%;
+  height: 100%;
+  background-color: brown;
+}
+
 /* ----- Section : awards ----- */
 
 .awards-inner {
@@ -412,9 +477,115 @@ hr.bar {
 /* gnb - 메뉴 할 때 많이씀 */
 
 /* ===== Contact with teacher ===== */
+.contact-inner {
+  background-color: #fff;
+  height: 100%;
+  border: 1px solid #ddd;
+}
 
+.contact-feature {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-feature > div {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+.contact-form {
+}
+
+.contact-form h3 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.send-box {
+}
+
+.send-box label {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0;
+  margin-top: 20px;
+}
+
+.send-box label span {
+  color: crimson;
+  font-weight: normal;
+}
+
+.send-box input[type="email"],
+.send-box input[type="text"],
+.send-box textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  width: 100%;
+  transition: 0.5;
+}
+
+.send-box input[type="email"]:hover,
+.send-box input[type="text"]:hover,
+.send-box textarea:hover,
+.send-box input[type="email"]:focus {
+  border: 1px solid #0088cc;
+  box-shadow: 0 0 5px #0088cc;
+}
+
+.send-box input[type="email"]:focus,
+.send-box input[type="text"]:focus,
+.send-box textarea:focus {
+  background-color: #eee;
+}
+
+.send-box button {
+  background-color: #0088cc;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.send-box button:hover {
+  background-color: #000;
+}
+
+.contact-info {
+}
+
+.contact-info h4 {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.contact-info ul li {
+  line-height: 2em;
+}
+
+.contact-info ul li:last-child {
+  color: #0088cc;
+}
+
+.contact-info p {
+  line-height: 1.5em;
+}
 /* ===== Contact ===== */
-
+/*
 .contact-inner {
   height: 100%;
   border: 3px solid red;
@@ -470,8 +641,13 @@ hr.bar {
   height: 35px;
 }
 
+.contact-input > input:hover {
+  border: 1px solid #1db1f0;
+  box-shadow: 0 0 2px 2px #1db1f0;
+}
 .contact-input > input:focus {
   background-color: yellow;
+  outline: none;
 }
 
 .contact-input > textarea {
@@ -481,8 +657,13 @@ hr.bar {
   border-radius: 5px;
 }
 
+.contact-input > textarea:hover {
+  border: 1px solid #1db1f0;
+  box-shadow: 0 0 2px 2px #1db1f0;
+}
 .contact-input > textarea:focus {
   background-color: yellow;
+  outline: none;
 }
 
 .form-btn {
@@ -509,15 +690,16 @@ hr.bar {
   margin: 10px 0;
 }
 
-.info > p {
+.info > ul > li {
   margin: 8px 0;
   font-size: 13px;
 }
 
-.info > span {
+.info > p {
   font-size: 13px;
 }
 
-.info > p:last-child {
+.info > ul > li:last-child {
   color: #1db1f0;
 }
+*/
