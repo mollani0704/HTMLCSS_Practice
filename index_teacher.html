@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DesignWorks Architecture Agency</title>
+    <title>htmlPratice with teacher</title>
     <script src="js/jquery-2.1.4.js"></script>
 
     <!-- Page Scroll Effects JS & CSS -->
@@ -12,9 +12,15 @@
     <script src="js/velocity/velocity.ui.min.js"></script>
     <script src="js/velocity/main.js"></script>
     <link rel="stylesheet" href="js/velocity/velocity.css" />
+
+    <!-- Slick.js -->
+    <script src="js/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="js/slick/slick-theme.css" />
+    <link rel="stylesheet" href="js/slick/slick.css" />
+
     <!-- Custom JS & CSS -->
     <script src="custom.js"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_teacher.css" />
     <link rel="stylesheet" href="responsive.css" />
   </head>
 
@@ -100,60 +106,17 @@
               <div class="tabs">
                 <div class="tab">
                   <div class="project-info">
-                    <div class="project-description">
-                      <div class="detail">
-                        <h1>
-                          Project : Glass Wall <br />
-                          Architecture
-                        </h1>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Animi unde eveniet enim soluta dolorem
-                          asperiores similique voluptatum architecto dolore
-                          ipsum. Commodi similique ipsam officiis unde ipsa
-                          rerum. Esse, delectus officiis. Harum cum deleniti
-                          voluptate laborum ipsam. Corporis doloremque enim
-                          error.
-                        </p>
-                      </div>
-                      <div class="detail2">
-                        <ul>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>
-                            <span>Area</span> : 1670 m2
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>
-                            <span>Completed Date</span> : September 2018
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>
-                            <span>Architect</span> : Andrew Yu
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="detail3">
-                        <div>
-                          <span class="number">225</span> <br />
-                          <span class="text">WORKING <br />DAY</span>
-                        </div>
-                        <div>
-                          <span class="number">320</span> <br /><span
-                            class="text"
-                            >MEMBERS</span
-                          >
-                        </div>
-                        <div>
-                          <span class="number">3M</span> <br /><span
-                            class="text"
-                            >BUDGET</span
-                          >
-                        </div>
-                      </div>
-                      <button class="project-btn">
-                        view-project <i class="fa fa-arrow-right"></i>
-                      </button>
+                    <h3></h3>
+                    <p></p>
+                    <ul>
+                      <li><b></b></li>
+                      <li><b></b></li>
+                      <li><b></b></li>
+                    </ul>
+                    <div class="detail">
+                      <div><span></span></div>
                     </div>
+                    <a class="view-project">view-project</a>
                   </div>
                   <div class="project-photo">
                     <img src="images/project-main-01-01.jpg" alt="" />
@@ -199,14 +162,13 @@
                 <div class="plan-info">
                   <div class="plan-heading">
                     <h1>Planning <br />For the Next Project</h1>
-                    <hr class="plan-bar" />
+                    <hr class="bar" />
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Cupiditate, adipisci id? Nisi necessitatibus culpa,
-                      reiciendis facilis qui odit neque ipsam minima autem
-                      quidem aperiam, eligendi ipsum? Minima fugiat ab tenetur
-                      consequatur labore facilis nemo veritatis. Maiores dicta
-                      delectus sequi a?
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Officia, ex. Eaque dignissimos quas dolore repellendus
+                      maiores iste aliquid nihil nostrum ab soluta fugit
+                      deleniti, sed debitis adipisci eius voluptatibus
+                      doloremque.
                     </p>
                   </div>
                   <div class="plan-photo">
@@ -214,7 +176,100 @@
                   </div>
                 </div>
                 <div class="history-info">
-                  <h1 class="history-heading">History</h1>
+                  <h1 class="history-heading">
+                    <h1>History</h1>
+                    <hr class="bar" />
+                    <div class="history-slider">
+                      <div>
+                        <h4>
+                          The Project <br />
+                          of Architect for the <span>2013</span>
+                        </h4>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Eligendi, perferendis? Eligendi molestiae
+                          corporis autem numquam?
+                        </p>
+                      </div>
+                      <div>
+                        <h4>
+                          The Project <br />
+                          of Architect for the <span>2014</span>
+                        </h4>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Eligendi, perferendis? Eligendi molestiae
+                          corporis autem numquam?
+                        </p>
+                      </div>
+                      <div>
+                        <h4>
+                          The Project <br />
+                          of Architect for the <span>2015</span>
+                        </h4>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Eligendi, perferendis? Eligendi molestiae
+                          corporis autem numquam?
+                        </p>
+                      </div>
+                      <div>
+                        <h4>
+                          The Project <br />
+                          of Architect for the <span>2016</span>
+                        </h4>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Eligendi, perferendis? Eligendi molestiae
+                          corporis autem numquam?
+                        </p>
+                      </div>
+                      <div>
+                        <h4>
+                          The Project <br />
+                          of Architect for the <span>2017</span>
+                        </h4>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Eligendi, perferendis? Eligendi molestiae
+                          corporis autem numquam?
+                        </p>
+                      </div>
+                      <div>
+                        <h4>
+                          The Project <br />
+                          of Architect for the <span>2018</span>
+                        </h4>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Eligendi, perferendis? Eligendi molestiae
+                          corporis autem numquam?
+                        </p>
+                      </div>
+                      <div>
+                        <h4>
+                          The Project <br />
+                          of Architect for the <span>2019</span>
+                        </h4>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Eligendi, perferendis? Eligendi molestiae
+                          corporis autem numquam?
+                        </p>
+                      </div>
+                      <div>
+                        <h4>
+                          The Project <br />
+                          of Architect for the <span>2020</span>
+                        </h4>
+                        <p>
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Eligendi, perferendis? Eligendi molestiae
+                          corporis autem numquam?
+                        </p>
+                      </div>
+                    </div>
+                  </h1>
                 </div>
               </div>
             </div>

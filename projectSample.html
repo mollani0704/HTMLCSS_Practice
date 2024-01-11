@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+      }
+
+      .project_inner {
+        height: 100%;
+        border: 3px solid red;
+        overflow: hidden;
+      }
+
+      .project_taps {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        width: 300%;
+        border: 3px solid yellow;
+      }
+
+      .project_taps > div {
+        float: left;
+        width: calc(100% / 3);
+      }
+
+      .project_tap {
+        height: 100%;
+        width: 100%;
+        transition-delay: 1s;
+      }
+
+      .project_tap > div {
+        float: left;
+      }
+
+      .project_info {
+        width: 25%;
+        height: 100%;
+        border: 2px solid blue;
+      }
+
+      .project_img {
+        width: 75%;
+        height: 100%;
+        border: 2px solid blue;
+      }
+
+      .tab_btn {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;
+        border: 2px solid #000;
+      }
+
+      .project_inner
+        input[type="radio"]:nth-child(1):checked
+        ~ .tab_btn
+        > label[for="tab1"] {
+        color: red;
+      }
+
+      .project_inner
+        input[type="radio"]:nth-child(2):checked
+        ~ .tab_btn
+        > label[for="tab2"] {
+        color: red;
+      }
+
+      .project_inner
+        input[type="radio"]:nth-child(3):checked
+        ~ .tab_btn
+        > label[for="tab3"] {
+        color: red;
+      }
+
+      .project_inner
+        input[type="radio"]:nth-child(1):checked
+        ~ .project_taps
+        > div:nth-child(1) {
+        z-index: 1;
+        transform: translateX(0%);
+        transition: 0.5s;
+      }
+      .project_inner
+        input[type="radio"]:nth-child(2):checked
+        ~ .project_taps
+        > div:nth-child(2) {
+        z-index: 1;
+        transform: translateX(-100%);
+        transition: 0.5s;
+      }
+      .project_inner
+        input[type="radio"]:nth-child(3):checked
+        ~ .project_taps
+        > div:nth-child(3) {
+        z-index: 1;
+        transform: translateX(-200%);
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- project-inner -->
+    <!-- input 라디오 버튼 name id -->
+    <!-- project taps -->
+    <!-- project tap -->
+    <!-- btn으로 라벨 -->
+    <div class="project_inner">
+      <input type="radio" name="tab_menu" id="tab1" hidden />
+      <input type="radio" name="tab_menu" id="tab2" hidden />
+      <input type="radio" name="tab_menu" id="tab3" hidden />
+      <div class="project_taps">
+        <div class="project_tap">
+          <div class="project_info">프로젝트 정보1</div>
+          <div class="project_img">프로젝트 사진1</div>
+        </div>
+        <div class="project_tap">
+          <div class="project_info">프로젝트 정보2</div>
+          <div class="project_img">프로젝트 사진2</div>
+        </div>
+        <div class="project_tap">
+          <div class="project_info">프로젝트 정보3</div>
+          <div class="project_img">프로젝트 사진3</div>
+        </div>
+      </div>
+      <div class="tab_btn">
+        <label for="tab1">tab1</label>
+        <label for="tab2">tab2</label>
+        <label for="tab3">tab3</label>
+      </div>
+    </div>
+  </body>
+</html>
