@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Source+Sans+3:wght@200;300;400;500;600&display=swap");
 
 /* FontAwesome CDN 4.7 */
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
@@ -103,12 +104,132 @@ header {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.38);
   transition: 0.5s;
 }
+
 .btn-hiring .fa {
   /* transform: rotateY(180deg); */
   margin-right: 5px;
 }
 .btn-hiring:active {
   transform: scale(0.1);
+}
+
+/* ===== Section : Home ===== */
+.home-inner {
+  height: 100%;
+  background-color: #fff;
+}
+
+.home-inner:before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  animation: overlay 1s 2s linear both;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.2em;
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  animation: slideup 2s linear;
+  animation-fill-mode: both;
+  /* display: none; */
+}
+
+.welcome-text span {
+  display: block;
+  font-size: 26px;
+}
+
+.welcome-text span .fa {
+  color: red;
+}
+
+.opacity-image {
+  background: url(images/section-bg-01.jpg) no-repeat center center;
+  height: 100%;
+  /* display: none; */
+  animation: showHome 4s linear;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+.home-heading {
+  position: absolute;
+  top: 50%;
+  left: 300px;
+  transform: translateY(-50%);
+  /* display: none; */
+}
+
+.home-heading span {
+  display: block;
+  font-size: 115px;
+  color: #fff;
+  font-weight: 600;
+  animation: showHome 2s 4s linear both;
+
+  /* width: 0;
+  overflow: hidden; */
+}
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  80% {
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  100% {
+    opacity: 0;
+    margin-top: 0;
+  }
+}
+
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+
+  50% {
+    width: 100%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes showHome {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* ----- Section : About ------ */
@@ -184,7 +305,6 @@ header {
 }
 
 .tabs {
-  border: 5px solid red;
   width: 300%;
   transition: 0.5s;
 }
@@ -270,6 +390,89 @@ input[id="tab2"]:checked ~ .tabs {
 }
 input[id="tab3"]:checked ~ .tabs {
   margin-left: -200%;
+}
+
+.project-number {
+  position: absolute;
+  top: 10px;
+  font-size: 100px;
+  z-index: 999;
+  color: #aaa;
+  opacity: 0.2;
+}
+
+.project-info {
+  position: relative;
+  padding: 50px;
+}
+.project-info h3 {
+  font-size: 20px;
+  position: relative;
+}
+.project-info p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.project-info ul {
+  line-height: 2em;
+}
+.project-info ul li:before {
+  content: "\f105";
+  font-family: "fontawesome";
+  margin-right: 10px;
+}
+
+.detail {
+  margin-bottom: 50px;
+}
+
+.detail div {
+  display: inline-block;
+  text-align: center;
+  width: 32.5%;
+  color: #999;
+}
+
+.detail div span {
+  font-size: 36px;
+  font-weight: bold;
+  display: block;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.view-project {
+  background-color: #3f3f3f;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  width: 200px;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.view-project:hover {
+  background-color: #000;
+}
+
+.view-project .fa {
+  transition: 0.5s;
+}
+
+.view-project:hover .fa {
+  margin-left: 30px;
+}
+
+.project-info:before {
+  content: attr(data-text);
+  font-size: 130px;
+  color: #eee;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 10px;
 }
 
 /* ===== Section : plan ====== */

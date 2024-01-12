@@ -111,6 +111,91 @@ header {
   transform: scale(0.1);
 }
 
+/* ===== Section : Home ===== */
+
+.home-inner {
+  width: 300%;
+  height: 100%;
+  border: 2px solid red;
+}
+
+.home-inner > div {
+  float: left;
+  width: calc(100% / 3);
+}
+
+.welcome-text {
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  /* display: none; */
+  transition: 0.5;
+  animation: slide ease 5s;
+  animation-delay: 3s;
+}
+
+.welcome-text > div {
+  position: absolute;
+  display: inline-block;
+  top: 40%;
+  left: 40%;
+  text-align: center;
+  font-size: 40px;
+  animation: fadein ease 3s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+
+.welcome-text > div > span:nth-child(3) {
+  font-size: 20px;
+}
+
+.welcome-text > div > span > i {
+  color: red;
+}
+
+.black-tab {
+  height: 100%;
+
+  border: 3px solid black;
+  background-color: black;
+  /* display: none; */
+}
+
+.opacity-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 4px solid blue;
+  background: url(images/section-bg-01.jpg) no-repeat;
+  /* display: none; */
+}
+
+.opacity-image > .home-heading {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  animation: fadein ease 3s;
+}
+
 /* ----- Section : About ------ */
 .about-inner {
   height: 100%;
@@ -267,13 +352,6 @@ input[name="tabmenu"] {
   text-align: center;
 }
 
-.btn label:before {
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  border: gray;
-}
-
 .btn label {
   cursor: pointer;
   width: 5px;
@@ -282,16 +360,26 @@ input[name="tabmenu"] {
   display: inline-block;
   border-radius: 50%;
   margin: 8px;
+  position: relative;
 }
 
-input[id="tab1"]:checked ~ .btn label[for="tab1"] {
-  color: red;
+.btn label:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border: 1px solid transparent;
+  width: 17px;
+  height: 17px;
+  left: -6px;
+  top: -6px;
+  border-radius: 50%;
+  transition: 0.3s;
 }
-input[id="tab2"]:checked ~ .btn label[for="tab2"] {
-  color: red;
-}
-input[id="tab3"]:checked ~ .btn label[for="tab3"] {
-  color: red;
+
+input[id="tab1"]:checked ~ .btn label[for="tab1"]:before,
+input[id="tab2"]:checked ~ .btn label[for="tab2"]:before,
+input[id="tab3"]:checked ~ .btn label[for="tab3"]:before {
+  border: 1px solid #aaa;
 }
 
 input[id="tab1"]:checked ~ .tabs {
